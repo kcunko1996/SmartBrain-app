@@ -5,6 +5,9 @@ Smart Brain App koristi Clarifai Api, koji omogucuje korisniku detekciju jednog 
 ## Tehnologije korištene prilikom izrade
 **ReactJS**, **Node.js**, **Express.js**, **PostgreSQL**
 
+## Web lokacija
+Za sto lakši pristup aplikaciji, korišten je heroku platforma koji nam je omogućila besplatno postavljanje aplikcije i njezine baze na cloud servis, aplikacij se može pristupiti pute linka  [SmartBrain App](https://peaceful-sands-92675.herokuapp.com/)
+
 
 ## Mogucnost nadogradnje
 * Koristenje tokena koji bi spriječili odjavu korisnika na osvježivanje stranice 
