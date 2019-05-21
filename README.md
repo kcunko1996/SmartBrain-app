@@ -11,5 +11,5 @@ Smart Brain App koristi Clarifai Api, koji omogucuje korisniku detekciju jednog 
 * Dodavanje validacije na Register i Login Form 
 * Dodavanje višestruke detekcije lica 
 
-##Developer 
+## Developer 
 Karlo Čunko
