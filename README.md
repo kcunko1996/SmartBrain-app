@@ -1,9 +1,21 @@
 # SmartBrain-app
 Smart Brain App koristi Clarifai Api, koji omogucuje korisniku detekciju jednog lica sa željene slike koju je prilozio putem URL-a slike, prilikom detekcije slike korisniku se pokazuje ukupan broj detekcija koje su izvršene sa njegovog korisničkog računa,  ova aplikacija je napravljena uz pomoc online couresa The Complete Web Developer in 2019: Zero to Mastery.
 
-## Sign In
+### Register
+Demostracija Register forme
+![Register](https://github.com/kcunko1996/SmartBrain-app/blob/master/github_slike/recognition.PNG)
+
+### Sign In
 Demostracija Sign In forme
-![alt text](https://github.com/kcunko1996/SmartBrain-app/blob/master/github_slike/Sign_In.PNG)
+![Sign In](https://github.com/kcunko1996/SmartBrain-app/blob/master/github_slike/Sign_In.PNG)
+
+### Main Page 
+Demostracija glavne stranice nakon login-a
+![Main Page](https://github.com/kcunko1996/SmartBrain-app/blob/master/github_slike/Dashboard.PNG)
+
+### Detekcija Slike
+Demostracija detekcije slike, slika mora slika mora biti u .jpg formatu da bi detekcija bila uspjesna 
+![Detection](https://github.com/kcunko1996/SmartBrain-app/blob/master/github_slike/recognition.PNG)
 
 
 ## Tehnologije korištene prilikom izrade
