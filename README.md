@@ -1,5 +1,5 @@
 # SmartBrain-app
-Smart Brain App koristi Clarifai Api, koji omogucuje korisniku detekciju jednog lica sa željene slike koju je prilozio putem URL-a slike, prilikom detekcije slike korisniku se pokazuje ukupan broj detekcija koje su izvršene sa njegovog korisničkog računa,  ova aplikacija je napravljena uz pomoc online couresa The Complete Web Developer in 2019: Zero to Mastery.
+Smart Brain App koristi Clarifai Api, koji omogucuje korisniku detekciju jednog lica sa željene slike koju je priložio putem URL-a slike, prilikom detekcije slike korisniku se pokazuje ukupan broj detekcija koje su izvršene sa njegovog korisničkog računa,  ova aplikacija je napravljena uz pomoc online couresa The Complete Web Developer in 2019: Zero to Mastery.
 
 ### Register
 Demostracija Register forme
