@@ -6,10 +6,10 @@ const Rank = ({name, entries}) => {
     return(
         <div>   
             <div className='white f3'>
-                {`${name} Broj slika koji je detektiran sa vašeg profila, `}
+                {`${name} Broj slika koji je detektiran sa vašeg profila je : `}
             </div>
             <div className='white f1'>
-                {entries ? `${entries}` : ''}
+                {entries ? `${entries}` : '0'}
             </div>
         </div>
     );

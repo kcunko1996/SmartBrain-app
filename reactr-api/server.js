@@ -7,10 +7,8 @@ const knex = require('knex');
 const db = knex({
     client: 'pg',
     connection: {
-      host : '127.0.0.1',
-      user : 'postgres',
-      password : 'user',
-      database : 'smart-brain'
+      connectionString : process.env.DATABASE_URL,
+      ssl: true
     }
   });
 
@@ -21,36 +19,9 @@ const app = express();
 
 app.use(bodyParser.json());
 app.use(cors());
-const database = {
-    users: [
-        {
-            id: '123',
-            name: 'jhon',
-            email: 'jhon@gmail.com',
-            password: 'password',
-            entries: 1,
-            joined: new Date()
-        },
-        {
-            id: '125',
-            name: 'sally',
-            email: 'sally@gmail.com',
-            passwod: 'bananas',
-            entries: 0,
-            joined: new Date()
-        }
-    ],
-    login: [
-        {
-            id: '987',
-            has: '',
-            email: 'jhon@gmail.com'
-        }
-    ]
-}
 
 app.get('/',(req,res) =>{
-    res.send(database.users)
+    res.send('it wokrs')
 });
 app.post('/signin',(req,res) => {
    db.select('email','hash').from('login')
@@ -60,7 +31,7 @@ app.post('/signin',(req,res) => {
        console.log(data)
       const isValid = bcrypt.compareSync(req.body.password, data[0].hash)
       if(isValid){
-          return db.select('*').from('users')
+          return db.select('*').from('useres')
           .where('email', '=', req.body.email)
           .then(user => {
             res.json(user[0])
@@ -91,7 +62,7 @@ app.post('/register', (req,res) => {
         .into('login')
         .returning('email')
         .then(userEmail =>{
-            return trx('users')
+            return trx('useres')
             .insert({
                 email:userEmail[0],
                 name: name, 
@@ -112,10 +83,10 @@ app.post('/register', (req,res) => {
 app.get('/profile/:id', (req,res)=> {
     const {id} = req.params;
     let found = false;
-    database.users.forEach(users => {
-        if(users.id === id){
+    database.useres.forEach(useres => {
+        if(useres.id === id){
             found = true;
-           return res.json(users);
+           return res.json(useres);
         }
     });
     if(!found){
@@ -126,7 +97,7 @@ app.get('/profile/:id', (req,res)=> {
 
 app.put('/image', (req,res) => {
     const {id} = req.body;
-    db('users').where('id','=',id)
+    db('useres').where('id','=',id)
     .increment('entries',1)
     .returning('entries')
     .then(entries => {
@@ -138,7 +109,7 @@ app.put('/image', (req,res) => {
 });
 
 
-app.listen(3000, () =>{
+app.listen(process.env.PORT || 3000, () =>{
     console.log('slusam na portu 3000')
 });
 

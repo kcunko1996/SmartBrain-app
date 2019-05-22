@@ -63,7 +63,7 @@ class App extends Component {
 
     app.models.predict(Clarifai.FACE_DETECT_MODEL, this.state.input).then( response =>{
       if(response){
-        fetch('http://localhost:3000/image',{
+        fetch('https://shielded-meadow-33531.herokuapp.com/image',{
           method: 'PUT',
           headers: {
             'Content-Type': 'application/json'
@@ -108,8 +108,8 @@ class App extends Component {
       <Navigation onRouteChange ={this.onRouteChange} IsSigned={IsSigned}  />
         { route === 'Home' ? <div> 
           <Logo />
-         <ImageLinkForm  onInputChange={this.onInputChange} onSubmit={this.onSubmit}/>
          <Rank name={this.state.user.name} entries={this.state.user.entries}/>
+         <ImageLinkForm  onInputChange={this.onInputChange} onSubmit={this.onSubmit}/>
         <FaceRecognition box={box} ImageUrl={input} /> 
         </div>
         : 
