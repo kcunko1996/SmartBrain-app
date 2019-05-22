@@ -15,7 +15,7 @@ Demostracija glavne stranice nakon login-a
 
 ### Detekcija Slike
 Demostracija detekcije slike, slika mora slika mora biti u .jpg formatu da bi detekcija bila uspjesna 
-![Detection](https://github.com/kcunko1996/SmartBrain-app/blob/master/github_slike/recognition.PNG)
+![Detection](https://github.com/kcunko1996/SmartBrain-app/blob/master/github_slike/Detection.PNG)
 
 
 ## Tehnologije korištene prilikom izrade
